@@ -238,6 +238,12 @@ function Dashboard() {
               type="text"
               name="Send_message"
               id="message"
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && !e.shiftKey) {
+                  e.preventDefault(); // Prevents newline in input
+                  sendMessage();
+                }
+              }}
             />
             <button type="button" onClick={sendMessage} >    
               <i
