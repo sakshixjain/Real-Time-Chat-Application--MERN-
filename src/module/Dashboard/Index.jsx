@@ -132,33 +132,36 @@ function Dashboard() {
         <div className="chat">
           <div className="search_chat">
             <div style={{ display: "flex" }}>
-              <h1 className="mt-2 text-white text-3xl font-semibold">Chats</h1>
+              <h1 className="mt-2 ml-4 text-white text-3xl font-semibold">Chats</h1>
               <div
                 style={{
                   fontSize: "larger",
-                  marginLeft: "160px",
+                  marginLeft: "250px",
                   marginTop: "8px",
+                  position:"absolute"
                 }}
               >
                 <h2
                   className="cursor-pointer flex items-center text-white"
                   onClick={() => setShowDropdown(!showDropdown)}
                 >
-                  <i className="fa-solid fa-user"></i>&nbsp; {user.name}
+                 {user.name}&nbsp; &nbsp;  <i className="fa-solid fa-user"></i>
                 </h2>
                 {showDropdown && (
-                  <div className="z-10 absolute right-0 mt-2 w-48 bg-white border border-gray-300 rounded shadow-lg">
+                  <div className="z-40 absolute -right-24 mt-2 w-52 bg-[#08031b] border border-[#d0ceda]  rounded-md shadow-lg">
                     <ul className="py-1">
                       <li>
                         <button
                           onClick={handleLogout}
-                          className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100"
-                        > <i className="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;
+                          className="block w-full text-left px-4 py-3 text-gray-100 hover:bg-[#8a878780]"
+                        > <i className="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;&nbsp;&nbsp;&nbsp;
                           Logout
                         </button>
-                        <button className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100">
-                         <Link to={"/users"}><i className="fa-solid fa-user-plus"> &nbsp;</i>Add Friends</Link> 
+                        <button className="block w-full text-left px-4 py-3 text-gray-100 hover:bg-[#8a878780]">
+                         <Link to={"/users"}><i className="fa-solid fa-user-plus"> &nbsp;&nbsp;</i>Add Friends</Link> 
                         </button>
+                        <button className="block w-full text-left px-4 py-3 text-gray-100 hover:bg-[#8a878780]"> <Link> <i className="fa-solid fa-users"> &nbsp;</i> Create Group 
+                        </Link></button>
                       </li>
                     </ul>
                   </div>
@@ -168,7 +171,7 @@ function Dashboard() {
     
             <form className="example" >
   <button type="submit"><i className="fa fa-search"></i></button>
-  <input type="text" placeholder="Search or start a new chat" name="search2"/>
+  <input type="text" placeholder="Search or start a new chat"  name="search2"/>
 </form>
           </div>
         </div>
