@@ -3,6 +3,10 @@
 
 A real-time chat application that allows users to communicate with each other in private or group chat rooms. Built with modern web technologies, the application ensures a seamless and interactive user experience with instant message delivery and dynamic updates.
 
+Images:
+![Main Page](public/chat.png)
+
+
 🚀 Features
 
 - Real-time Messaging: Send and receive messages instantly.
